@@ -1,0 +1,19 @@
+main {
+    width: 390px;
+    height: 844px;
+    border: solid 2px red;
+}
+#first-news {
+    display: flex;
+    flex-direction: column;
+}
+#first-news img {
+    width: 100%;
+}
+#main-news {
+    flex-grow: 1;
+}
+#main-news h1 {
+    text-align: center;
+    text-transform: uppercase;
+}
