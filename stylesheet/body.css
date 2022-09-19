@@ -1,8 +1,13 @@
+/* just for me */
 main {
-    width: 390px;
-    height: 844px;
+    width: calc(390px * 50 / 100);  /* based on an iPhone 12 Pro then 50% to have a global view */
+    height: calc(844px * 50 / 100); /* based on an iPhone 12 Pro then 50% to have a global view */
     border: solid 2px red;
+    overflow-y: scroll;
 }
+main::-webkit-scrollbar { width: 0px}
+/* */
+
 #first-news {
     display: flex;
     flex-direction: column;
@@ -16,4 +21,7 @@ main {
 #main-news h1 {
     text-align: center;
     text-transform: uppercase;
+}
+.similar-news b:after {
+    content: ": ";
 }
