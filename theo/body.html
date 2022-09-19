@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <title>Body</title>
     <link rel="stylesheet" href="../stylesheet/body.css">
+    <script src="../tools/jquery.min.js"></script>
 </head>
 <body>
+    <script type="module" src="../tools/prefabLoader.js"></script>
     <main>
         <div id="first-news">
             <div id="main-news" class="news">
@@ -16,10 +18,11 @@
             <div class="news">
                 <img src="../img/media.svg" alt="an image or photo">
                 <h2>This is news in the first news</h2>
-                <article class="similar-news">
-                    <hr>
-                    <a href=""><b>Title</b>Another similar news</a>
-                </article>
+                <custom-article></custom-article>
+<!--                <article class="similar-news">-->
+<!--                    <hr>-->
+<!--                    <a href=""><b>Title</b>Another similar news</a>-->
+<!--                </article>-->
             </div>
         </div>
     </main>
