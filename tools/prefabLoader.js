@@ -31,5 +31,4 @@ document.addEventListener('DOMContentLoaded', async function () {
             item.innerHTML = prefab[key];
         });
     }
-    class Test {}
 });
