@@ -1,4 +1,8 @@
 /* just for me */
+:root {
+    --red: rgb(228, 0, 0);
+    --black: rgb(39, 38, 38);
+}
 main {
     /*width: calc(390px * 50 / 100);  !* based on an iPhone 12 Pro then 50% to have a global view *!*/
     /*height: calc(844px * 50 / 100); !* based on an iPhone 12 Pro then 50% to have a global view *!*//*width: calc(390px * 50 / 100);  !* based on an iPhone 12 Pro then 50% to have a global view *!*/
@@ -6,10 +10,35 @@ main {
     height: calc(844px * 75 / 100); /* based on an iPhone 12 Pro then 50% to have a global view */
     border: solid 2px red;
     overflow-y: scroll;
+    padding: 0 10px;
+    color: var(--black);
 }
-main::-webkit-scrollbar { width: 0px}
+main::-webkit-scrollbar { width: 0; }
 /* */
-
+a:link, a:visited, a:hover, a:active {
+    color: var(--black);
+    text-decoration: unset;
+}
+a span { color: var(--red); }
+#short {
+    width: 100%;
+    list-style: none;
+    padding: 8px 0;
+    margin: unset;
+    white-space: nowrap;
+    overflow-x: scroll;
+}
+#short li { display: inline-block; }
+#short::-webkit-scrollbar { height: 0; }
+#short span {
+    text-transform: uppercase;
+}
+#short span:after { content: ": "; }
+#short a:after {
+    content: "|";
+    color: #d9d9d9;
+    /*padding: 0 8px;*/
+}
 #first-news {
     display: flex;
     flex-direction: column;
