@@ -1,7 +1,9 @@
 /* just for me */
 main {
-    width: calc(390px * 50 / 100);  /* based on an iPhone 12 Pro then 50% to have a global view */
-    height: calc(844px * 50 / 100); /* based on an iPhone 12 Pro then 50% to have a global view */
+    /*width: calc(390px * 50 / 100);  !* based on an iPhone 12 Pro then 50% to have a global view *!*/
+    /*height: calc(844px * 50 / 100); !* based on an iPhone 12 Pro then 50% to have a global view *!*//*width: calc(390px * 50 / 100);  !* based on an iPhone 12 Pro then 50% to have a global view *!*/
+    width: calc(390px * 75 / 100);  /* based on an iPhone 12 Pro then 50% to have a global view */
+    height: calc(844px * 75 / 100); /* based on an iPhone 12 Pro then 50% to have a global view */
     border: solid 2px red;
     overflow-y: scroll;
 }
