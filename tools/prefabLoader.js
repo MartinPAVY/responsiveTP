@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', async function () {
     */
     let prefab = {
         "custom-short": null,
-        "custom-article": null,
+        "custom-RSSfeed": null,
     }
     for (let key in prefab) {
         await getPrefab(key).then((result) => {
