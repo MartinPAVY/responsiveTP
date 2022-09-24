@@ -15,12 +15,17 @@ main {
 }
 main::-webkit-scrollbar { width: 0; }
 /* */
+
+img, a { width: 100%; }
 a:link, a:visited, a:hover, a:active {
     color: var(--black);
     text-decoration: unset;
 }
+a:hover { color: var(--red); }
 a span { color: var(--red); }
-#short {
+
+
+#RSSfeed {
     width: 100%;
     list-style: none;
     padding: 8px 0;
@@ -28,23 +33,18 @@ a span { color: var(--red); }
     white-space: nowrap;
     overflow-x: scroll;
 }
-#short li { display: inline-block; }
-#short::-webkit-scrollbar { height: 0; }
-#short span {
-    text-transform: uppercase;
-}
-#short span:after { content: ": "; }
-#short a:after {
+#RSSfeed li { display: inline-block; }
+#RSSfeed::-webkit-scrollbar { height: 0; }
+#RSSfeed span { text-transform: uppercase; }
+#RSSfeed span:after { content: ": "; }
+#RSSfeed a:after {
     content: "|";
     color: #d9d9d9;
-    /*padding: 0 8px;*/
+    padding: 0 8px;
 }
 #first-news {
     display: flex;
     flex-direction: column;
-}
-#first-news img {
-    width: 100%;
 }
 #main-news {
     flex-grow: 1;
@@ -53,6 +53,27 @@ a span { color: var(--red); }
     text-align: center;
     text-transform: uppercase;
 }
+.news { padding-bottom: 1rem; }
+.news h2 { margin: 0; }
 .similar-news b:after {
     content: ": ";
+}
+
+#interesting-news h2 {
+    text-align: center;
+    background-color: #e6e6e6;
+    position: relative;
+    margin: auto;
+    top: -1.5rem;
+    width: 95%;
+    padding: 1rem 0;
+}
+
+
+/* do not touch, webstorm is just not up to date */
+@media (width <= 768px) {
+    #short {display: none;}
+}
+@media (width >= 1020px) {
+    #short {display: block;}
 }
