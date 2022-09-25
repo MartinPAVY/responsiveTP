@@ -20,8 +20,7 @@ a:link, a:visited, a:hover, a:active {
     color: var(--black);
     text-decoration: unset;
 }
-a:hover { color: var(--red); }
-a:active { color: var(--red); }
+a:hover, a:active { color: var(--red); }
 
 #RSSfeed {
     display: none;
@@ -30,8 +29,8 @@ a:active { color: var(--red); }
 }
 #RSSfeed ul {
     list-style: none;
-    padding: 8px 0;
-    margin: unset;
+    padding: 8px 0 0 0;
+    margin: 0;
 }
 #RSSfeed li { display: inline-block; }
 #RSSfeed::-webkit-scrollbar { height: 0; }
@@ -62,7 +61,6 @@ a:active { color: var(--red); }
     content: ": ";
 }
 
-#interesting-news a:hover {color: unset;}
 #interesting-news a:has(h2) {
     text-align: center;
     background-color: #e6e6e6;
@@ -72,18 +70,26 @@ a:active { color: var(--red); }
     width: 95%;
     padding: 1rem 0;
 }
-#news-byTheme h4 {
+#news-byTheme .theme {
+    display: flex;
     background-color: #f2f2f2;
+}
+#news-byTheme .theme h4 {
     padding: 0.3rem;
     margin: 0;
+    width: 100%;
+}
+#news-byTheme .theme .arrow-ico {
+    background-color: rgba(191, 191, 191, 0.5);
+    top: 0;
+    bottom: 0;
+    width: 2rem;
 }
 .similar-news-imaged {
     display: flex;
     margin-top: 0.5rem;
     box-sizing: border-box;
 }
-.similar-news-imaged div a:hover {color: unset}
-.similar-news-imaged div a:active {color: var(--red);}
 .similar-news-imaged div:has(img) { width: 25%; }
 .similar-news-imaged div:has(hr) { width: 75%; }
 .similar-news-imaged div:has(hr) a {padding-left: 0.3rem;}
@@ -92,11 +98,12 @@ a:active { color: var(--red); }
 #inCaseYouMissedIt {
     background-color: #1a1a1a;
     color: #fff;
-    position: relative;
+    position: absolute;
     left: 0;
     right: 0;
+    padding: 0 8px;
 }
-#inCaseYouMissedIt a:hover
+#inCaseYouMissedIt div a {color: unset; }
 
 
 
