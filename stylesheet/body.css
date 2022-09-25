@@ -17,13 +17,13 @@ main::-webkit-scrollbar { width: 0; }
 /* */
 
 img, a { width: 100%; }
+a { display: block; }
 a:link, a:visited, a:hover, a:active {
     color: var(--black);
     text-decoration: unset;
 }
 a:hover { color: var(--red); }
 a span { color: var(--red); }
-
 
 #RSSfeed {
     width: 100%;
@@ -68,6 +68,7 @@ a span { color: var(--red); }
     width: 95%;
     padding: 1rem 0;
 }
+
 
 
 /* do not touch, webstorm is just not up to date */
