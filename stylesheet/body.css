@@ -4,8 +4,6 @@
     --black: rgb(39, 38, 38);
 }
 main {
-    /*width: calc(390px * 50 / 100);  !* based on an iPhone 12 Pro then 50% to have a global view *!*/
-    /*height: calc(844px * 50 / 100); !* based on an iPhone 12 Pro then 50% to have a global view *!*//*width: calc(390px * 50 / 100);  !* based on an iPhone 12 Pro then 50% to have a global view *!*/
     width: calc(390px * 75 / 100);  /* based on an iPhone 12 Pro then 50% to have a global view */
     height: calc(844px * 75 / 100); /* based on an iPhone 12 Pro then 50% to have a global view */
     border: solid 2px red;
@@ -23,19 +21,24 @@ a:link, a:visited, a:hover, a:active {
     text-decoration: unset;
 }
 a:hover { color: var(--red); }
-a span { color: var(--red); }
+a:active { color: var(--red); }
 
 #RSSfeed {
-    width: 100%;
-    list-style: none;
-    padding: 8px 0;
-    margin: unset;
+    display: none;
     white-space: nowrap;
     overflow-x: scroll;
 }
+#RSSfeed ul {
+    list-style: none;
+    padding: 8px 0;
+    margin: unset;
+}
 #RSSfeed li { display: inline-block; }
 #RSSfeed::-webkit-scrollbar { height: 0; }
-#RSSfeed span { text-transform: uppercase; }
+#RSSfeed span {
+    text-transform: uppercase;
+    color: var(--red);
+}
 #RSSfeed span:after { content: ": "; }
 #RSSfeed a:after {
     content: "|";
@@ -59,7 +62,8 @@ a span { color: var(--red); }
     content: ": ";
 }
 
-#interesting-news h2 {
+#interesting-news a:hover {color: unset;}
+#interesting-news a:has(h2) {
     text-align: center;
     background-color: #e6e6e6;
     position: relative;
@@ -68,13 +72,38 @@ a span { color: var(--red); }
     width: 95%;
     padding: 1rem 0;
 }
+#news-byTheme h4 {
+    background-color: #f2f2f2;
+    padding: 0.3rem;
+    margin: 0;
+}
+.similar-news-imaged {
+    display: flex;
+    margin-top: 0.5rem;
+    box-sizing: border-box;
+}
+.similar-news-imaged div a:hover {color: unset}
+.similar-news-imaged div a:active {color: var(--red);}
+.similar-news-imaged div:has(img) { width: 25%; }
+.similar-news-imaged div:has(hr) { width: 75%; }
+.similar-news-imaged div:has(hr) a {padding-left: 0.3rem;}
+.similar-news-imaged div hr { margin-top: 0; }
+
+#inCaseYouMissedIt {
+    background-color: #1a1a1a;
+    color: #fff;
+    position: relative;
+    left: 0;
+    right: 0;
+}
+#inCaseYouMissedIt a:hover
 
 
 
 /* do not touch, webstorm is just not up to date */
-@media (width <= 768px) {
-    #short {display: none;}
-}
-@media (width >= 1020px) {
-    #short {display: block;}
+/* ↓ tablet & desktop */
+@media (width >= 768px) {
+    #RSSfeed {display: block;}
+    a:hover { color: var(--red); }
+    a:active { color: var(--red); }
 }

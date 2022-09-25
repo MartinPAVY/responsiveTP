@@ -9,12 +9,14 @@
 </head>
 <body>
     <main>
-        <ul id="RSSfeed">
-            <custom-RSSfeed></custom-RSSfeed>
-            <custom-RSSfeed></custom-RSSfeed>
-            <custom-RSSfeed></custom-RSSfeed>
-            <custom-RSSfeed></custom-RSSfeed>
-        </ul>
+        <section id="RSSfeed">
+            <ul>
+                <custom-RSSfeed></custom-RSSfeed>
+                <custom-RSSfeed></custom-RSSfeed>
+                <custom-RSSfeed></custom-RSSfeed>
+                <custom-RSSfeed></custom-RSSfeed>
+            </ul>
+        </section>
         <section id="first-news">
             <div id="main-news" class="news">
                 <h1>This is the main news of the moment</h1>
@@ -30,17 +32,25 @@
             </div>
         </section>
         <section id="interesting-news">
-            <a href="">
-                <img src="../img/media.svg" alt="an image or photo">
-                <span><h2>This news may interest you</h2></span>
-            </a>
+            <div class="news">
+                <a href=""><img src="../img/media.svg" alt="an image or photo"></a>
+                <a href=""><h2>This news may interest you</h2></a>
+            </div>
         </section>
         <section id="news-byTheme">
-            <div>
+            <div class="news">
                 <h4>Theme</h4>
                 <img src="../img/media.svg" alt="an image or photo">
                 <h2>Main news in this theme</h2>
                 <custom-imagedArticle></custom-imagedArticle>
+                <custom-imagedArticle></custom-imagedArticle>
+            </div>
+        </section>
+        <section id="inCaseYouMissedIt">
+            <h2>In Case You Missed It</h2><hr>
+            <div class="news">
+                <a href=""><img src="../img/media.svg" alt="an image or photo"></a>
+                <a href=""><h2>Did you really miss this news?</h2></a>
             </div>
         </section>
     </main>
