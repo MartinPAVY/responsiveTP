@@ -4,6 +4,8 @@
     --black: rgb(39, 38, 38);
 }
 main {
+    /*width: calc(390px * 50 / 100);  !* based on an iPhone 12 Pro then 50% to have a global view *!*/
+    /*height: calc(844px * 50 / 100); !* based on an iPhone 12 Pro then 50% to have a global view *!*//*width: calc(390px * 50 / 100);  !* based on an iPhone 12 Pro then 50% to have a global view *!*/
     width: calc(390px * 75 / 100);  /* based on an iPhone 12 Pro then 50% to have a global view */
     height: calc(844px * 75 / 100); /* based on an iPhone 12 Pro then 50% to have a global view */
     border: solid 2px red;
@@ -20,24 +22,20 @@ a:link, a:visited, a:hover, a:active {
     color: var(--black);
     text-decoration: unset;
 }
-a:hover, a:active { color: var(--red); }
+a:hover { color: var(--red); }
+a span { color: var(--red); }
 
 #RSSfeed {
-    display: none;
+    width: 100%;
+    list-style: none;
+    padding: 8px 0;
+    margin: unset;
     white-space: nowrap;
     overflow-x: scroll;
 }
-#RSSfeed ul {
-    list-style: none;
-    padding: 8px 0 0 0;
-    margin: 0;
-}
 #RSSfeed li { display: inline-block; }
 #RSSfeed::-webkit-scrollbar { height: 0; }
-#RSSfeed span {
-    text-transform: uppercase;
-    color: var(--red);
-}
+#RSSfeed span { text-transform: uppercase; }
 #RSSfeed span:after { content: ": "; }
 #RSSfeed a:after {
     content: "|";
@@ -61,7 +59,7 @@ a:hover, a:active { color: var(--red); }
     content: ": ";
 }
 
-#interesting-news a:has(h2) {
+#interesting-news h2 {
     text-align: center;
     background-color: #e6e6e6;
     position: relative;
@@ -70,47 +68,13 @@ a:hover, a:active { color: var(--red); }
     width: 95%;
     padding: 1rem 0;
 }
-#news-byTheme .theme {
-    display: flex;
-    background-color: #f2f2f2;
-}
-#news-byTheme .theme h4 {
-    padding: 0.3rem;
-    margin: 0;
-    width: 100%;
-}
-#news-byTheme .theme .arrow-ico {
-    background-color: rgba(191, 191, 191, 0.5);
-    top: 0;
-    bottom: 0;
-    width: 2rem;
-}
-.similar-news-imaged {
-    display: flex;
-    margin-top: 0.5rem;
-    box-sizing: border-box;
-}
-.similar-news-imaged div:has(img) { width: 25%; }
-.similar-news-imaged div:has(hr) { width: 75%; }
-.similar-news-imaged div:has(hr) a {padding-left: 0.3rem;}
-.similar-news-imaged div hr { margin-top: 0; }
-
-#inCaseYouMissedIt {
-    background-color: #1a1a1a;
-    color: #fff;
-    position: absolute;
-    left: 0;
-    right: 0;
-    padding: 0 8px;
-}
-#inCaseYouMissedIt div a {color: unset; }
 
 
 
 /* do not touch, webstorm is just not up to date */
-/* ↓ tablet & desktop */
-@media (width >= 768px) {
-    #RSSfeed {display: block;}
-    a:hover { color: var(--red); }
-    a:active { color: var(--red); }
+@media (width <= 768px) {
+    #short {display: none;}
+}
+@media (width >= 1020px) {
+    #short {display: block;}
 }

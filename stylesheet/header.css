@@ -1,6 +1,7 @@
 body{
     margin: 0;
 }
-header{
-    background: rgb(12, 12, 12);
+
+ul{
+    margin-left: 1em;
 }
