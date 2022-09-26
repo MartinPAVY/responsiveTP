@@ -4,16 +4,23 @@
     --black: rgb(39, 38, 38);
 }
 main {
-    width: calc(390px * 75 / 100);  /* based on an iPhone 12 Pro then 50% to have a global view */
-    height: calc(844px * 75 / 100); /* based on an iPhone 12 Pro then 50% to have a global view */
-    border: solid 2px red;
+    /*: calc(390px * 75 / 100);  /* based on an iPhone 12 Pro then 50% to have a global view */
+    /*height: calc(844px * 75 / 100); /* based on an iPhone 12 Pro then 50% to have a global view */
+    /*border: solid 2px red;
     overflow-y: scroll;
-    padding: 0 10px;
+    padding: 0 10px;*/
     color: var(--black);
+    font-family: Arial, Helvetica, sans-serif;
 }
 main::-webkit-scrollbar { width: 0; }
 /* */
-
+h1 {font-size: 4em;}
+h2 {font-size: 1.7em;}
+section {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
 img, a { width: 100%; }
 a { display: block; }
 a:link, a:visited, a:hover, a:active {
@@ -103,6 +110,19 @@ a:hover, a:active { color: var(--red); }
     right: 0;
     padding: 0 8px;
 }
+#inCaseYouMissedIt .section-title {
+    display: inline-flex;
+    gap: 0.5rem;
+    flex-basis: 100%;
+}
+#inCaseYouMissedIt .section-title hr {
+    flex: 1;
+    border: none;
+    height: 0.3rem;
+    border-top: solid 0.2rem var(--red);
+    border-bottom: solid 0.2rem var(--red);
+    margin: auto;
+}
 #inCaseYouMissedIt div a {color: unset; }
 
 
@@ -110,6 +130,8 @@ a:hover, a:active { color: var(--red); }
 /* do not touch, webstorm is just not up to date */
 /* ↓ tablet & desktop */
 @media (width >= 768px) {
+    main { padding: 5%; }
+    section { flex-direction: row; }
     #RSSfeed {display: block;}
     a:hover { color: var(--red); }
     a:active { color: var(--red); }
