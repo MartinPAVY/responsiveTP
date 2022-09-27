@@ -9,3 +9,19 @@ footer{
     padding: 1em;
     text-align: center;
 }
+ul#social li{
+    display: inline;
+    text-align: center;
+    padding: .5rem;
+}
+
+img{
+    width: 2rem;
+}
+
+a{
+    text-decoration: none;
+}
+a:visited{
+    text-decoration: none;
+}
