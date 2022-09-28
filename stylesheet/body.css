@@ -4,25 +4,28 @@
     --black: rgb(39, 38, 38);
 }
 main {
-    /*: calc(390px * 75 / 100);  /* based on an iPhone 12 Pro then 50% to have a global view */
-    /*height: calc(844px * 75 / 100); /* based on an iPhone 12 Pro then 50% to have a global view */
-    /*border: solid 2px red;
-    overflow-y: scroll;
-    padding: 0 10px;*/
     color: var(--black);
     font-family: Arial, Helvetica, sans-serif;
 }
 main::-webkit-scrollbar { width: 0; }
 /* */
 
-h1 {font-size: 4em;}
-h2 {font-size: 1.7em;}
-section {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+h1 {font-size: 4rem;}
+h2 {
+    font-size: 1.7rem;
+    margin: 0;
 }
-img, a { width: 100%; }
+h3 {font-size: 2rem;}
+section {
+    /*display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;*/
+    display: grid;
+    grid-template-columns: 1fr;
+}
+/*section div {width: 100%;}*/
+/*section div {flex-basis: 100%; }*/
+img { width: 100%; }
 a { display: block; }
 a:link, a:visited, a:hover, a:active {
     color: var(--black);
@@ -34,6 +37,7 @@ a:hover, a:active { color: var(--red); }
     display: none;
     white-space: nowrap;
     overflow-x: scroll;
+    margin-bottom: 2rem;
 }
 #RSSfeed ul {
     list-style: none;
@@ -52,22 +56,15 @@ a:hover, a:active { color: var(--red); }
     color: #d9d9d9;
     padding: 0 8px;
 }
-#first-news {
-    display: flex;
-    flex-direction: column;
-}
-#main-news {
-    flex-grow: 1;
+#first-news div {
+    display: grid;
+    grid-template-columns: 1fr;
 }
 #main-news h1 {
     text-align: center;
     text-transform: uppercase;
 }
-.news { padding-bottom: 1rem; }
-.news h2 { margin: 0; }
-.similar-news b:after {
-    content: ": ";
-}
+.similar-news b:after { content: ": "; }
 
 #interesting-news a:has(h2) {
     text-align: center;
@@ -78,11 +75,12 @@ a:hover, a:active { color: var(--red); }
     width: 95%;
     padding: 1rem 0;
 }
+/*#interesting-news h2 {}*/
 #news-byTheme .theme {
     display: flex;
     background-color: #f2f2f2;
 }
-#news-byTheme .theme h4 {
+#news-byTheme .theme h3 {
     padding: 0.3rem;
     margin: 0;
     width: 100%;
@@ -114,7 +112,8 @@ a:hover, a:active { color: var(--red); }
 #inCaseYouMissedIt .section-title {
     display: inline-flex;
     gap: 0.5rem;
-    flex-basis: 100%;
+    /*flex-basis: 100%;*/
+    /*flex-basis: auto;*/
 }
 #inCaseYouMissedIt .section-title hr {
     flex: 1;
@@ -122,18 +121,31 @@ a:hover, a:active { color: var(--red); }
     height: 0.3rem;
     border-top: solid 0.2rem var(--red);
     border-bottom: solid 0.2rem var(--red);
-    margin: auto;
+    /*margin: auto;*/
 }
 #inCaseYouMissedIt div a {color: unset; }
-
+#inCaseYouMissedIt div:not(hr) {
+    flex-basis: unset;
+}
 
 
 /* do not touch, webstorm is just not up to date */
 /* ↓ tablet & desktop */
 @media (width >= 768px) {
-    main { padding: 5%; }
-    section { flex-direction: row; }
-    #RSSfeed {display: block;}
-    a:hover { color: var(--red); }
-    a:active { color: var(--red); }
+        main, #inCaseYouMissedIt { padding: 0 14%; }
+        h1 {
+            font-size: 1.8rem;
+            margin: 0.5rem 0;
+        }
+        section {
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 1rem;
+        }
+        #RSSfeed {display: block;}
+        #first-news { grid-template-columns: 0.7fr 1fr; }
+        #first-news div {
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+    }
 }

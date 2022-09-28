@@ -20,8 +20,11 @@ document.addEventListener('DOMContentLoaded', async function () {
     * your custom HTML element must have the same name in the file name in the prefab folder and in the variable below
     */
     let prefab = {
+        "custom-firstNews": null,
         "custom-RSSfeed": null,
         "custom-article": null,
+        "custom-interestingNews": null,
+        "custom-themedNews": null,
         "custom-imagedArticle": null,
     }
     for (let key in prefab) {
