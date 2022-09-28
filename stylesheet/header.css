@@ -1,7 +1,11 @@
-body{
-    margin: 0;
+p{
+    padding-top: 4rem;
 }
 
-ul{
-    margin-left: 1em;
+#menuIcon{
+    max-width: 30px;
+}
+
+li{
+    color: #e6e6e6;
 }
