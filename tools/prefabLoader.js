@@ -1,5 +1,5 @@
 // made by Théo, because i love javascript and i hate manually editing ALL recurring "prefab" and because we don't use php
-document.addEventListener('DOMContentLoaded', async function () {
+async function loadPrefabs() {
     //TODO optimize and make the code clear for anyone
     function getPrefab(fileName) {
         return new Promise((resolve, reject) => {
@@ -36,4 +36,4 @@ document.addEventListener('DOMContentLoaded', async function () {
             item.innerHTML = prefab[key];
         });
     }
-});
+};

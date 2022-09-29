@@ -24,27 +24,34 @@
             </ul>
         </section>
         <section id="first-news">
-            <article id="main-news">
-                <h1>This is the main news of the moment</h1>
-                <img src="../img/media.svg" alt="an image or photo">
-                <h2>This is a new in the first news</h2>
-                <custom-article></custom-article>
-            </article>
-            <div>
-                <custom-firstNews></custom-firstNews>
-                <custom-firstNews></custom-firstNews>
-                <custom-firstNews></custom-firstNews>
+            <div class="grid">
+                <article id="main-news">
+                    <h1>This is the main news of the moment</h1>
+                    <img src="../img/media.svg" alt="an image or photo">
+                    <h2>This is a new in the first news</h2>
+                    <custom-article></custom-article>
+                </article>
+                <div class="grid">
+                    <custom-firstNews></custom-firstNews>
+                    <custom-firstNews></custom-firstNews>
+                    <custom-firstNews></custom-firstNews>
+                </div>
             </div>
         </section>
         <section id="interesting-news">
-            <custom-interestingNews></custom-interestingNews>
-            <custom-interestingNews></custom-interestingNews>
-            <custom-interestingNews></custom-interestingNews>
+            <div class="section-title"><h2>Section</h2><hr></div>
+            <div class="grid">
+                <custom-interestingNews></custom-interestingNews>
+                <custom-interestingNews></custom-interestingNews>
+                <custom-interestingNews></custom-interestingNews>
+            </div>
         </section>
         <section id="news-byTheme">
-            <custom-themedNews></custom-themedNews>
-            <custom-themedNews></custom-themedNews>
-            <custom-themedNews></custom-themedNews>
+            <div class="grid">
+                <custom-themedNews></custom-themedNews>
+                <custom-themedNews></custom-themedNews>
+                <custom-themedNews></custom-themedNews>
+            </div>
         </section>
         <section id="inCaseYouMissedIt">
             <div class="section-title"><h2>In Case You Missed It</h2><hr></div>
@@ -58,3 +65,22 @@
     </main>
 </body>
 </html>
+
+<script>
+    loadPrefabs().then(() => {
+        var RSSfeed = document.getElementById("RSSfeed");
+        if (RSSfeed.style.display != "none") {
+            var RSSfeedWidth;
+            setInterval(() => {
+                if (RSSfeedWidth == RSSfeed.scrollLeft) RSSfeed.scrollLeft = 0;
+                else {
+                    RSSfeed.scrollTo({
+                        left: RSSfeed.scrollLeft + 2,
+                        behavior: "smooth",
+                    });
+                    RSSfeedWidth = RSSfeed.scrollLeft;
+                }
+            }, 75);
+        }
+    });
+</script>
