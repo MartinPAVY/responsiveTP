@@ -7,11 +7,14 @@
     <script src="tools/jquery.min.js"></script>
 </head>
 <body>
+    <!-- work in progress, works completely only on the webstorm server at the moment -->
     <custom-body></custom-body>
+    <!-- -->
 </body>
 </html>
 
 <script>
+    // work in progress, works completely only on the webstorm server at the moment
     loadPrefabs(["custom-body"], "theo", false).then(() => {
         let prefab = document.getElementsByTagName("custom-body")[0];
         let prefabScript = prefab.getElementsByTagName("script");
@@ -25,4 +28,5 @@
             eval(prefabScript[prefabScript.length - 1].innerHTML);
         });
     });
+    //
 </script>

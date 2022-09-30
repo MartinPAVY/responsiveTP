@@ -20,7 +20,7 @@ async function loadPrefabs(filenames, location, prefabInPrefab = true) {
         });
     }
 
-    let prefabs = {};
+   let prefabs = {};
     filenames.forEach((element) => prefabs[element] = null);
 
     async function saveContent(key) {
