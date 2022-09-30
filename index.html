@@ -3,8 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>Main Page</title>
+    <script src="tools/prefabLoader.js"></script>
+    <script src="tools/jquery.min.js"></script>
 </head>
 <body>
-    nothing for the moment
+    <custom-body></custom-body>
 </body>
 </html>
+
+<script>
+    loadPrefabs(["custom-body"], "theo", false).then(() => {
+        let prefab = document.getElementsByTagName("custom-body")[0];
+        let prefabScript = prefab.getElementsByTagName("script");
+        new Promise((resolve, reject) => {
+            let observer = new MutationObserver(() => {
+                if(prefabScript[2]) resolve(observer);
+            });
+            observer.observe(prefab, {childList: true});
+        }).then((solved) => {
+            solved.disconnect();
+            eval(prefabScript[prefabScript.length - 1].innerHTML);
+        });
+    });
+</script>

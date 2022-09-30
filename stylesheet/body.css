@@ -2,6 +2,7 @@
     --red: rgb(228, 0, 0);
     --black: rgb(39, 38, 38);
     --lightGray: #f2f2f2;
+    --graySeparator: #d9d9d9;
     --middleGray: #e6e6e6;
     --darkGray: rgba(191, 191, 191, 0.5);
 }
@@ -20,7 +21,7 @@ h3 {
 }
 hr {
     border: none;
-    border-top: solid 1px #d9d9d9;
+    border-top: solid 1px var(--graySeparator);
 }
 img { width: 100%; }
 a {
@@ -46,8 +47,8 @@ a:hover, a:active { color: var(--red); }
     flex: 1;
     border: none;
     height: 0.1rem;
-    border-top: solid 0.2rem #d9d9d9;
-    border-bottom: solid 0.2rem #d9d9d9;
+    border-top: solid 0.2rem var(--graySeparator);
+    border-bottom: solid 0.2rem var(--graySeparator);
     margin: auto;
 }
 
@@ -72,7 +73,7 @@ a:hover, a:active { color: var(--red); }
 #RSSfeed span:after { content: ": "; }
 #RSSfeed a:after {
     content: "|";
-    color: #d9d9d9;
+    color: var(--graySeparator);
     padding: 0 8px;
 }
 #first-news div {
@@ -135,7 +136,7 @@ a:hover, a:active { color: var(--red); }
 }
 
 
-/* do not touch, webstorm is just not up to date */
+/* do not touch, webstorm is just not up to date for syntax improvements lv4*/
 /* ↓ tablet & desktop */
 @media (width >= 768px) {
         main, #inCaseYouMissedIt { padding: 0 14%; }

@@ -26,9 +26,9 @@
         <section id="first-news">
             <div class="grid">
                 <article id="main-news">
-                    <h1>This is the main news of the moment</h1>
-                    <img src="../img/media.svg" alt="an image or photo">
-                    <h2>This is a new in the first news</h2>
+                    <a href=""><h1>This is the main news of the moment</h1></a>
+                    <a href=""><img src="../img/media.svg" alt="an image or photo"></a>
+                    <a href=""><h2>This is a new in the first news</h2></a>
                     <custom-article></custom-article>
                 </article>
                 <div class="grid">
@@ -66,7 +66,14 @@
 </html>
 
 <script>
-    loadPrefabs().then(() => {
+    loadPrefabs([
+        "custom-firstNews",
+        "custom-RSSfeed",
+        "custom-article",
+        "custom-interestingNews",
+        "custom-themedNews",
+        "custom-imagedArticle",
+    ], "../prefab").then(() => {
         var RSSfeed = document.getElementById("RSSfeed");
         if (RSSfeed.style.display != "none") {
             var RSSfeedWidth;
