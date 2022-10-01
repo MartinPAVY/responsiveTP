@@ -1,10 +1,43 @@
-ul li a {
+footer{
+    background-color: rgb(33, 37, 41);
     color: #e6e6e6;
+    text-align: center;
+}
+.container-fluid{
+    flex-direction: column;
+    display: inline-block;
+}
+#follow{
+    flex-direction: column;
+    display: inline-block;
 }
 
 #categories ul li{
     text-align: center;
     padding: .5rem;
+    color: #e6e6e6;
 }
 
+ul#social{
+    margin-left: -2rem;
+}
 
+ul#social a{
+    text-decoration: none;
+}
+
+ul#social a:visited{
+    text-decoration: none;
+}
+
+ul#social li{
+    display: inline;
+    text-align: center;
+    padding: 1rem;
+}
+
+#categories ul li:hover{
+    text-align: center;
+    padding: .5rem;
+    text-decoration: underline;
+}

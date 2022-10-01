@@ -19,9 +19,13 @@ img{
     width: 2rem;
 }
 
-a{
+ul#social a{
     text-decoration: none;
 }
-a:visited{
+
+ul#social a:visited{
     text-decoration: none;
+}
+ul#social{
+    margin-left: -2rem;
 }
