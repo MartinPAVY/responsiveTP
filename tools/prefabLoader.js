@@ -1,4 +1,4 @@
-// made by Theo, because I love javascript and I hate manually editing ALL recurring "prefab" and because we don't use php
+// made by Theo, because I love javascript and I hate manually editing ALL recurring "prefab" and because we don't use php or node.js
 /** this is where custom elements are loaded
  * a custom HTML element need a dash {@link https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements}
  * to use this script ensure to add jquery (there is one in this directory) and this script in the head for your html file

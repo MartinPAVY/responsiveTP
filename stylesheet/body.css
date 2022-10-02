@@ -98,28 +98,37 @@ a:hover, a:active { color: var(--red); }
 #interesting-news article h3 {padding: 0 3rem}
 #news-byTheme .theme {
     display: flex;
+    justify-content: space-between;
     background-color: var(--lightGray);
+    height: 5vh;
 }
-#news-byTheme .theme h3 {
+#news-byTheme .theme h2 {
     padding: 0.3rem;
-    margin: 0;
-    width: 100%;
+    margin: auto 0;
 }
 #news-byTheme .theme .arrow-ico {
     background-color: var(--darkGray);
-    top: 0;
-    bottom: 0;
-    width: 2rem;
+    width: 5vh;
+    text-align: center;
+    font-size: 5vh;
+    line-height: 4.5vh;
 }
 .similar-news-imaged {
     display: flex;
     margin-top: 0.5rem;
-    box-sizing: border-box;
 }
-.similar-news-imaged div:has(img) { width: 25%; }
-.similar-news-imaged div:has(hr) { width: 75%; }
-.similar-news-imaged div:has(hr) a {padding-left: 0.3rem;}
+.similar-news-imaged a { flex: 1; }
+/* ↓ is not supported by some browsers ON MOBILE DEVICES (why?😭) */
+/*
+.similar-news-imaged div:has(hr) { flex: 2; }
+*/
+.similar-news-imaged div { flex: 2; }
 .similar-news-imaged div hr { margin-top: 0; }
+.similar-news-imaged div a {
+    padding-left: 0.3rem;
+    /* don't no why but <a> is weird to manipulate on mobile devices */
+    font-size: 1.7rem;
+}
 
 #inCaseYouMissedIt {
     background-color: #1a1a1a;
@@ -157,6 +166,7 @@ a:hover, a:active { color: var(--red); }
             gap: 1rem;
         }
         #interesting-news .grid { grid-template-columns: 1fr 1fr; }
+        .similar-news-imaged div a { font-size: 0.7rem; }
         #inCaseYouMissedIt {
             grid-template-columns: 1fr;
         }
