@@ -66,7 +66,6 @@ ul#social li{
 
 #categories ul li a:hover{
     text-align: center;
-    padding: .5rem;
     text-decoration: underline;
 }
 
@@ -75,8 +74,10 @@ ul#social li{
 }
 
 @media screen and (min-width: 768px) {
-    #categories{
+    #categories ul{
         display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: minmax(100px, auto);
     }
     #dropdown{
         display: none;
@@ -95,22 +96,25 @@ ul#social li{
         width: 45rem;
     }
     .categoriesContent{
-        display: inline;
+        display: inline-block;
     }
-    .categoriesContent li{
+    .categoriesContent ul li{
         list-style: none;
         font-size: .8rem;
         font-weight: lighter;
-        margin-top: -1.2rem;
     }
     .categoriesContent li a:hover{
-        text-align: center;
-        text-decoration: underline;
+        text-decoration: none;
     }
 }
 
 @media screen and (min-width: 1024px) {
     #bar1{
         width: 63rem;
+    }
+    #categories ul{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: minmax(100px, auto);
     }
 }
