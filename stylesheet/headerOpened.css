@@ -1,3 +1,7 @@
+body{
+    background-color: rgb(12, 12, 12);
+}
+
 nav {
     color: #e6e6e6;
 }
@@ -10,6 +14,11 @@ footer{
     flex-direction: column;
     display: inline-block;
 }
+
+#bar1{
+    width: 30rem;
+}
+
 #follow{
     flex-direction: column;
     display: inline-block;
@@ -29,8 +38,16 @@ footer{
     display: inline;
 }
 
+#dropdown_Large{
+    display: none;
+}
+
 ul#social{
     margin-left: -2rem;
+}
+
+#bar{
+    margin-bottom: 2rem;
 }
 
 ul#social a{
@@ -47,8 +64,53 @@ ul#social li{
     padding: 1rem;
 }
 
-#categories ul li:hover{
+#categories ul li a:hover{
     text-align: center;
     padding: .5rem;
     text-decoration: underline;
+}
+
+.categoriesContent{
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    #categories{
+        display: grid;
+    }
+    #dropdown{
+        display: none;
+    }
+    #dropdown_Large{
+        flex-direction: column;
+        display: inline-block;
+        margin-top: 1rem;
+    }
+    #dropdown_Large ul li{
+        display: inline;
+        text-align: center;
+        padding: 3rem;
+    }
+    #bar1{
+        width: 45rem;
+    }
+    .categoriesContent{
+        display: inline;
+    }
+    .categoriesContent li{
+        list-style: none;
+        font-size: .8rem;
+        font-weight: lighter;
+        margin-top: -1.2rem;
+    }
+    .categoriesContent li a:hover{
+        text-align: center;
+        text-decoration: underline;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    #bar1{
+        width: 63rem;
+    }
 }
