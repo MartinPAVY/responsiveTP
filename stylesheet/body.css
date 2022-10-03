@@ -148,10 +148,6 @@ a:hover, a:active { color: var(--red); }
 
 /* do not touch, webstorm is just not up to date for syntax improvements lv4 */
 /* ↓ tablet & desktop */
-/* syntax improvements lv4 is currently in deployment on mobile devices */
-/* last news: it looks like media query and lv4 syntax improvements no longer work well
-on the latest browser updates on mobile devices (i've used slightly older versions so far)
-so to try the responsive do it only on desktop */
 /*@media (min-width: 768px) {*/
 @media (width >= 768px) {
     main, #inCaseYouMissedIt { padding: 0 14%; }
