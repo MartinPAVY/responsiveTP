@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <!-- this the main index in the root directory, but as it is in work in progress and need a server, we won't use it -->
+
+    <!-- work in progress, works completely only on the webstorm server at the moment -->
+    <custom-body></custom-body>
+    <!-- -->
+</body>
+</html>
+
+<script>
+    // work in progress, works completely only on the webstorm server at the moment
+    loadPrefabs(["custom-body"], "theo", false).then(() => {
+        let prefab = document.getElementsByTagName("custom-body")[0];
+        let prefabScript = prefab.getElementsByTagName("script");
+        new Promise((resolve, reject) => {
+            let observer = new MutationObserver(() => {
+                if(prefabScript[2]) resolve(observer);
+            });
+            observer.observe(prefab, {childList: true});
+        }).then((solved) => {
+            solved.disconnect();
+            eval(prefabScript[prefabScript.length - 1].innerHTML);
+        });
+    });
+    //
+</script>
