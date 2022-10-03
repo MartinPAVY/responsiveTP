@@ -76,7 +76,9 @@ ul#social li{
 @media screen and (min-width: 768px) {
     #categories ul{
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
+        row-gap: 3rem;
+        column-gap: 5rem;
         grid-auto-rows: minmax(100px, auto);
     }
     #dropdown{
@@ -88,20 +90,21 @@ ul#social li{
         margin-top: 1rem;
     }
     #dropdown_Large ul li{
-        display: inline;
+        display: inline-flex;
         text-align: center;
-        padding: 3rem;
+        padding-left: 3rem;
     }
     #bar1{
         width: 45rem;
     }
     .categoriesContent{
         display: inline-block;
+        font-size: .8rem;
+        padding-bottom: .8rem;
+        font-weight: lighter;
     }
     .categoriesContent ul li{
         list-style: none;
-        font-size: .8rem;
-        font-weight: lighter;
     }
     .categoriesContent li a:hover{
         text-decoration: none;
@@ -112,9 +115,18 @@ ul#social li{
     #bar1{
         width: 63rem;
     }
+    #bar2{
+        width: 63rem;
+    }
     #categories ul{
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(6, 1fr);
+        row-gap: 3rem;
+        column-gap: 5rem;
         grid-auto-rows: minmax(100px, auto);
+    }
+    #follow{
+        flex-direction: row;
+        display: inline-flex;
+        margin-left: 45rem;
     }
 }
