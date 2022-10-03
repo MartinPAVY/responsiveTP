@@ -19,6 +19,7 @@ h3 {
     font-size: 2rem;
     margin: 0;
 }
+section { margin-bottom: 5rem; }
 hr {
     border: none;
     border-top: solid 1px var(--graySeparator);
@@ -36,12 +37,13 @@ a:hover, a:active { color: var(--red); }
 .grid {
     display: grid;
     grid-template-columns: 1fr;
+    gap: 4rem;
 }
 .section-title {
     display: inline-flex;
     gap: 0.5rem;
     width: 100%;
-    margin: 1rem 0 1.5rem 0;
+    margin: 1rem 0 1.2rem 0;
 }
 .section-title hr {
     flex: 1;
@@ -139,36 +141,39 @@ a:hover, a:active { color: var(--red); }
     padding: 0 8px;
 }
 #inCaseYouMissedIt .section-title hr { border-color: var(--red); }
-#inCaseYouMissedIt div a {color: unset; }
-#inCaseYouMissedIt div:not(hr) {
-    flex-basis: unset;
-}
+#inCaseYouMissedIt div a {color: white; }
+#inCaseYouMissedIt div a:hover, #inCaseYouMissedIt div a:active {color: var(--red); }
+#inCaseYouMissedIt .grid .grid { grid-template-columns: 1fr; }
 
 
-/* do not touch, webstorm is just not up to date for syntax improvements lv4*/
+/* do not touch, webstorm is just not up to date for syntax improvements lv4 */
 /* ↓ tablet & desktop */
+/* syntax improvements lv4 is currently in deployment on mobile devices */
+/* last news: it looks like media query and lv4 syntax improvements no longer work well
+on the latest browser updates on mobile devices (i've used slightly older versions so far)
+so to try the responsive do it only on desktop */
+/*@media (min-width: 768px) {*/
 @media (width >= 768px) {
-        main, #inCaseYouMissedIt { padding: 0 14%; }
-        h1 {
-            font-size: 1.8rem;
-            margin: 0.5rem 0;
-        }
-        h2 { font-size: 1.2rem; }
-        h3 { font-size: 0.8rem; }
-        .grid {
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 1rem;
-        }
-        #RSSfeed {display: block;}
-        #first-news { grid-template-columns: 0.7fr 1fr; }
-        #first-news div {
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
-        }
-        #interesting-news .grid { grid-template-columns: 1fr 1fr; }
-        .similar-news-imaged div a { font-size: 0.7rem; }
-        #inCaseYouMissedIt {
-            grid-template-columns: 1fr;
-        }
+    main, #inCaseYouMissedIt { padding: 0 14%; }
+    h1 {
+        font-size: 1.8rem;
+        margin: 0.5rem 0;
     }
+    h2 { font-size: 1.2rem; }
+    h3 { font-size: 0.8rem; }
+    section { margin: unset; }
+    .grid {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1rem;
+    }
+    #RSSfeed { display: block; }
+    #first-news { grid-template-columns: 0.7fr 1fr; }
+    #first-news div {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+    #interesting-news .grid { grid-template-columns: 1fr 1fr; }
+    .similar-news-imaged div a { font-size: 0.7rem; }
+    #inCaseYouMissedIt { grid-template-columns: 1fr; }
+    #inCaseYouMissedIt .grid { grid-template-columns: 2fr 1fr; }
 }
