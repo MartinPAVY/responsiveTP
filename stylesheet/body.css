@@ -206,20 +206,17 @@ ul#social{
     .similar-news-imaged div a { font-size: 0.7rem; }
     #inCaseYouMissedIt { grid-template-columns: 1fr; }
     #inCaseYouMissedIt .grid { grid-template-columns: 2fr 1fr; }
-    #TermsOfUse{
+    .footerZoomed{
         text-align: left;
     }
-    #AllRightsReserved{
-        text-align: left;
-    }
-    #TermsOfUse ul li{
+    .footerZoomed ul li{
         display: inline-flex;
         padding-left: 1rem;
         margin-top: 0;
     }
-    #AllRightsReserved ul li{
-        display: inline-flex;
-        padding-left: 1rem;
-        margin: .5rem;
+    .footerZoomed ul li p{
+        padding-top: 0rem;
+    }
+    #social li a img{
     }
 }
