@@ -1,21 +1,24 @@
-body{
-    margin: 0;
-    color: #e6e6e6;
-}
-
 footer{
     background: rgb(33, 37, 41);
     color: #e6e6e6;
-    padding: 1em;
+    padding-top: 1em;
+    text-align: center;
+}
+#TermsOfUse ul li{
+    list-style: none;
+    text-align: center;
+}
+#AllRightsReserved ul li{
+    list-style: none;
     text-align: center;
 }
 ul#social li{
     display: inline;
     text-align: center;
-    padding: .5rem;
+    padding-right: .5rem;
 }
 
-img{
+.imgFooter{
     width: 2rem;
 }
 
@@ -27,5 +30,22 @@ ul#social a:visited{
     text-decoration: none;
 }
 ul#social{
-    margin-left: -2rem;
+    margin-left: -1.5rem;
+}
+
+@media screen and (min-width: 768px){
+    #TermsOfUse{
+        text-align: left;
+    }
+    #AllRightsReserved{
+        text-align: left;
+    }
+    #TermsOfUse ul li{
+        display: inline-flex;
+        padding-left: 1rem;
+    }
+    #AllRightsReserved ul li{
+        display: inline-flex;
+        padding-left: 1rem;
+    }
 }
