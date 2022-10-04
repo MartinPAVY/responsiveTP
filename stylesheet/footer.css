@@ -5,28 +5,15 @@ footer{
     text-align: center;
     margin-top: 150rem;
 }
-
-#logoFooter{
-    visibility: ;
-}
-ul#social a{
-    text-decoration: none;
-}
-
-ul#social a:visited{
-    text-decoration: none;
-}
-ul#social{
-    margin-left: -1.5rem;
-}
 .footer ul li{
     list-style: none;
     text-align: center;
 }
 ul#social li{
-    display: inline-flex;
+    flex-direction: row;
+    display: block;
     text-align: center;
-    padding-right: .5rem;
+    padding-top: .5rem;
 }
 
 .imgFooter{
@@ -40,11 +27,11 @@ ul#social a{
 ul#social a:visited{
     text-decoration: none;
 }
-ul#social{
-    margin-left: -1.5rem;
-}
 #social li a img{
-    max-width: 1rem;
+    max-width: 1.5rem;
+}
+#social li img{
+    max-width: 2rem;
 }
 
 @media screen and (min-width: 768px){
