@@ -295,3 +295,22 @@
         max-width: 25px;
     }
 </style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var RSSfeed = document.getElementById("RSSfeed");
+        if (RSSfeed.style.display != "none") {
+            var RSSfeedWidth;
+            setInterval(() => {
+                if (RSSfeedWidth == RSSfeed.scrollLeft) RSSfeed.scrollLeft = 0;
+                else {
+                    RSSfeed.scrollTo({
+                        left: RSSfeed.scrollLeft + 2,
+                        behavior: "smooth",
+                    });
+                    RSSfeedWidth = RSSfeed.scrollLeft;
+                }
+            }, 75);
+        }
+    });
+</script>
