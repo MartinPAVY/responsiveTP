@@ -3,8 +3,8 @@ footer{
     color: #e6e6e6;
     padding-top: 1em;
     text-align: center;
-    margin-top: 150rem;
 }
+ul { margin: 0; }
 .footer ul li{
     list-style: none;
     text-align: center;

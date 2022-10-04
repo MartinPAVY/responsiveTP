@@ -82,9 +82,9 @@
         "custom-imagedArticle",
         "custom-missedNews",
     ], "../prefab").then(() => {
-        var RSSfeed = document.getElementById("RSSfeed");
+        let RSSfeed = document.getElementById("RSSfeed");
         if (RSSfeed.style.display != "none") {
-            var RSSfeedWidth;
+            let RSSfeedWidth;
             setInterval(() => {
                 if (RSSfeedWidth == RSSfeed.scrollLeft) RSSfeed.scrollLeft = 0;
                 else {
