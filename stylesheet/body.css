@@ -169,16 +169,7 @@ ul#social li{
     max-width: 25px;
 }
 
-ul#social a{
-    text-decoration: none;
-}
 
-ul#social a:visited{
-    text-decoration: none;
-}
-ul#social{
-    margin-left: -1.5rem;
-}
 
 /* do not touch, webstorm is just not up to date for syntax improvements lv4 */
 /* ↓ tablet & desktop */
@@ -206,17 +197,4 @@ ul#social{
     .similar-news-imaged div a { font-size: 0.7rem; }
     #inCaseYouMissedIt { grid-template-columns: 1fr; }
     #inCaseYouMissedIt .grid { grid-template-columns: 2fr 1fr; }
-    .footerZoomed{
-        text-align: left;
-    }
-    .footerZoomed ul li{
-        display: inline-flex;
-        padding-left: 1rem;
-        margin-top: 0;
-    }
-    .footerZoomed ul li p{
-        padding-top: 0rem;
-    }
-    #social li a img{
-    }
 }

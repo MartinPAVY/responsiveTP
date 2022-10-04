@@ -1,3 +1,6 @@
+#main{
+    margin-top: 4rem;
+}
 body{
     background-color: rgb(12, 12, 12);
 }
@@ -14,7 +17,13 @@ footer{
     flex-direction: column;
     display: inline-block;
 }
-
+.close{
+    background-color:rgb(33, 37, 41);
+    border: none;
+}
+.close span{
+    color: rgb(94, 98, 97);
+}
 #bar1{
     width: 30rem;
 }

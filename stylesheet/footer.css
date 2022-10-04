@@ -3,12 +3,19 @@ footer{
     color: #e6e6e6;
     padding-top: 1em;
     text-align: center;
+    margin-top: 150rem;
 }
-#TermsOfUse ul li{
-    list-style: none;
-    text-align: center;
+ul#social a{
+    text-decoration: none;
 }
-#AllRightsReserved ul li{
+
+ul#social a:visited{
+    text-decoration: none;
+}
+ul#social{
+    margin-left: -1.5rem;
+}
+.footer ul li{
     list-style: none;
     text-align: center;
 }
@@ -32,20 +39,20 @@ ul#social a:visited{
 ul#social{
     margin-left: -1.5rem;
 }
+#social li a img{
+    max-width: 1rem;
+}
 
 @media screen and (min-width: 768px){
-    #TermsOfUse{
+    .footer{
         text-align: left;
     }
-    #AllRightsReserved{
-        text-align: left;
-    }
-    #TermsOfUse ul li{
+    .footer ul li{
         display: inline-flex;
         padding-left: 1rem;
+        margin-top: 0;
     }
-    #AllRightsReserved ul li{
-        display: inline-flex;
-        padding-left: 1rem;
+    .footer ul li p{
+        padding-top: 0rem;
     }
 }
