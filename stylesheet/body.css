@@ -138,6 +138,7 @@ main a:hover, a:active { color: var(--red); }
     background-color: #1a1a1a;
     color: #fff;
     padding: 0 8px;
+    margin: 0;
 }
 #inCaseYouMissedIt .section-title hr { border-color: var(--red); }
 #inCaseYouMissedIt div a {color: white; }
