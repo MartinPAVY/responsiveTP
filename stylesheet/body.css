@@ -57,17 +57,18 @@ main a:hover, a:active { color: var(--red); }
 
 #RSSfeed {
     display: none;
-    white-space: nowrap;
-    overflow-x: scroll;
+
     margin-bottom: 2rem;
 }
 #RSSfeed ul {
+    white-space: nowrap;
+    overflow-x: scroll;
     list-style: none;
     padding: 8px 0 0 0;
     margin: 0;
 }
+#RSSfeed ul::-webkit-scrollbar { height: 0; }
 #RSSfeed li { display: inline-block; }
-#RSSfeed::-webkit-scrollbar { height: 0; }
 #RSSfeed a { font-size: 1rem; }
 #RSSfeed span {
     text-transform: uppercase;
