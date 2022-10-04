@@ -20,7 +20,7 @@ ul#social{
     text-align: center;
 }
 ul#social li{
-    display: inline;
+    display: inline-flex;
     text-align: center;
     padding-right: .5rem;
 }
