@@ -24,7 +24,10 @@ main section {margin-bottom: 5rem; }
 main hr {
     border: none;
     border-top: solid 1px var(--graySeparator);
+    margin-block: 0.5em;
+    opacity: 1;
 }
+main *, ::after, ::before { box-sizing: unset; }
 main img { width: 100%; }
 main a {
     display: block;
@@ -104,28 +107,26 @@ main a:hover, a:active { color: var(--red); }
     display: flex;
     justify-content: space-between;
     background-color: var(--lightGray);
-    height: 5vh;
+    height: 10vh;
 }
 #news-byTheme .theme h2 {
-    padding: 0.3rem;
+    padding-left: 0.3rem;
     margin: auto 0;
 }
 #news-byTheme .theme .arrow-ico {
     background-color: var(--darkGray);
-    width: 5vh;
+    width: 10vh;
     text-align: center;
-    font-size: 5vh;
-    line-height: 4.5vh;
+    font-size: 10vh;
+    line-height: 8.5vh;
 }
 .similar-news-imaged {
     display: flex;
-    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
 }
-.similar-news-imaged a { flex: 1; }
-/* ↓ is not supported by some browsers ON MOBILE DEVICES (why?😭) */
-/*
-.similar-news-imaged div:has(hr) { flex: 2; }
-*/
+.similar-news-imaged a {flex: 1; }
+/* ↓ has() is not supported by some browsers ON MOBILE DEVICES (why?😭) */
+/*.similar-news-imaged div:has(hr) { flex: 2; }*/
 .similar-news-imaged div { flex: 2; }
 .similar-news-imaged div hr { margin-top: 0; }
 .similar-news-imaged div a {
@@ -157,7 +158,7 @@ main a:hover, a:active { color: var(--red); }
     }
     main h2 { font-size: 1.2rem; }
     main h3 { font-size: 0.8rem; }
-    main section { margin: unset; }
+    main section {margin-bottom: 1rem; }
     .grid {
         grid-template-columns: 1fr 1fr 1fr;
         gap: 1rem;
@@ -169,6 +170,13 @@ main a:hover, a:active { color: var(--red); }
         gap: 1rem;
     }
     #interesting-news .grid { grid-template-columns: 1fr 1fr; }
+    #news-byTheme .theme { height: 5vh; }
+    #news-byTheme .theme h2 { font-size: 3vh; }
+    #news-byTheme .theme .arrow-ico {
+        width: 5vh;
+        font-size: 5vh;
+        line-height: 4.5vh;
+    }
     .similar-news-imaged div a { font-size: 0.7rem; }
     #inCaseYouMissedIt { grid-template-columns: 1fr; }
     #inCaseYouMissedIt .grid { grid-template-columns: 2fr 1fr; }
