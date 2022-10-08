@@ -6,10 +6,6 @@ footer{
     color: #e6e6e6;
     text-align: center;
 }
-.container-fluid{
-    flex-direction: column;
-    display: inline-block;
-}
 .close{
     background-color:rgb(33, 37, 41);
     border: none;
@@ -28,6 +24,11 @@ footer{
 }
 
 #follow{
+    flex-direction: column;
+    display: inline-block;
+}
+
+#categories{
     flex-direction: column;
     display: inline-block;
 }
@@ -69,11 +70,13 @@ ul#social a:visited{
 ul#social li{
     text-align: center;
     padding: 1rem;
+    list-style: none;
 }
 
 #categories ul li a:hover{
     text-align: center;
     text-decoration: underline;
+    color: #e6e6e6;
 }
 
 .categoriesContent{
@@ -87,6 +90,7 @@ ul#social li{
         row-gap: 3rem;
         column-gap: 5rem;
         grid-auto-rows: minmax(100px, auto);
+        flex-direction: initial;
     }
     #dropdown{
         display: none;
@@ -120,7 +124,12 @@ ul#social li{
         display: none;
     }
 }
-
+#searchBarFooter{
+    display: unset;
+    flex-wrap: inherit;
+    align-items: center;
+    justify-content: space-between;
+}
 @media screen and (min-width: 1024px) {
     #bar1{
         width: 63rem;

@@ -63,5 +63,10 @@ ul#social a:visited{
     }
 }
 @media screen and (min-width: 1024px){
-
+    div#follow{
+        margin-left: 0em;
+    }
+    #logoInFollow{
+        margin-right: 35rem;
+    }
 }
