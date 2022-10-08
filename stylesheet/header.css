@@ -1,7 +1,9 @@
 header nav {
     position: unset !important;
 }
-p { padding: 8px; }
+p {
+    padding: 8px;
+}
 #menuIcon{
     max-width: 30px;
 }

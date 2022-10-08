@@ -4,10 +4,15 @@ footer{
     padding-top: 1em;
     text-align: center;
 }
-ul { margin: 0; }
+ul {
+    margin: 0;
+}
 .footer ul li{
     list-style: none;
     text-align: center;
+}
+ul#social{
+    padding-left: 0px;
 }
 ul#social li{
     flex-direction: row;
@@ -45,5 +50,9 @@ ul#social a:visited{
     }
     .footer ul li p{
         padding-top: 0rem;
+    }
+    ul#social li{
+        flex-direction: column;
+        display: inline;
     }
 }
