@@ -58,4 +58,10 @@ ul#social a:visited{
     ul#social li a {
         padding: .4em;
     }
+    #logoInFollow{
+        margin-right: 25rem;
+    }
+}
+@media screen and (min-width: 1024px){
+
 }
